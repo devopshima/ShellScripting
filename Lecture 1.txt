@@ -100,9 +100,57 @@ Display the current directory.
 Display today's date in the format: Day, Month Date, Year (e.g., Tuesday, October 10, 2023).
 Display the system uptime.
 
+FILE of TASK1 
+$ cat shell1.sh
+#!/bin/bash
+echo "display system information"
+echo "CURRENT USER = $(whoami)"
+echo "CURRENT DIRECTORY= $(pwd)"
+echo "TODAY'S DATE = $(date +"%A, %B, %D, %Y")"
+echo "SYSTEM UPTIME = $(net stats workstation | grep 'since')"
+
+
+echo "------end of script-----"
+
+output of TASK1
+$ sh shell1.sh
+display system information
+CURRENT USER = AzureAD+HimaBinduAkula
+CURRENT DIRECTORY= /c/Users/HimaBinduAkula/himabindu/practice
+TODAY'S DATE = Tuesday, December, 12/09/25, 2025 ######### WE USED D SO we got full date but we have to use d to print only date #
+------end of script-----
+###################################################################if $(date +"%A, %B %d, %Y")##########################################################################
+$ sh shell1.sh
+display system information
+CURRENT USER = AzureAD+HimaBinduAkula
+CURRENT DIRECTORY= /c/Users/HimaBinduAkula/himabindu/practice
+TODAY'S DATE = Tuesday, December 09, 2025
+SYSTEM UPTIME = Statistics since 21-11-2025 18:48:36
+------end of script-----
+	
+###################################################################################################################################################################
 Task 2: Write an interactive script
 Write a shell script that:
 	Asks the user for their name.
 	Asks the user for their favorite place.
 	Displays a message like: "Hello [Name], your favorite place is [Place]!"
+FILE OF TASK 2
+#!/bin/bash
+
+# Ask for user name
+echo -n "Enter your name: "
+read name
+# Ask for favorite place
+echo -n "Enter your favorite place: "
+read place
+# Display message
+echo "Hello $name, your favorite place is $place!"
+
+output is 
+$ sh task2.sh
+Enter your name: bindu
+Enter your favorite place: kerala
+Hello bindu, your favorite place is kerala!
+
+
 
