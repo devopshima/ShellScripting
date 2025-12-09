@@ -138,7 +138,7 @@ FILE OF TASK 2
 #!/bin/bash
 
 # Ask for user name
-echo -n "Enter your name: "
+echo -n "Enter your name: " ##"-n "is not to skip this without input
 read name
 # Ask for favorite place
 echo -n "Enter your favorite place: "
@@ -151,6 +151,7 @@ $ sh task2.sh
 Enter your name: bindu
 Enter your favorite place: kerala
 Hello bindu, your favorite place is kerala!
+
 
 
 
